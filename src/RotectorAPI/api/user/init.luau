@@ -1,8 +1,8 @@
-local UserFetching = {}
+local UserLookup = {}
 local HttpService = game:GetService("HttpService")
 local Config = require(script.Parent.config)
 
-function UserFetching.UserLookUp(userId)
+function UserLookup.UserLookUp(userId)
     local success, response = pcall(function()
         return HttpService:GetAsync(Config.BaseURL .. "/v1/lookup/roblox/user/" .. userId)
     end)
@@ -16,7 +16,7 @@ function UserFetching.UserLookUp(userId)
     end
 end
 
-function UserFetching.UserFlagStatusLookup(userId)
+function UserLookup.UserFlagStatusLookup(userId)
     local success, response = pcall(function()
         return HttpService:GetAsync(Config.BaseURL .. "/v1/lookup/roblox/user/" .. userId .. "/plaintext")
     end)
@@ -29,7 +29,7 @@ function UserFetching.UserFlagStatusLookup(userId)
     end
 end
 
-function UserFetching.LookUpUserByBatch(userIds, excludeInfo)
+function UserLookup.LookUpUserByBatch(userIds, excludeInfo)
     local body = HttpService:JSONEncode({
         ids = userIds,
         excludeInfo = excludeInfo or false
@@ -48,7 +48,7 @@ function UserFetching.LookUpUserByBatch(userIds, excludeInfo)
     end
 end
 
-function UserFetching.LookUpUserCommunityAccount(userId)
+function UserLookup.LookUpUserCommunityAccount(userId)
     local success, response = pcall(function()
         return HttpService:GetAsync(Config.BaseURL .. "/v1/lookup/roblox/user/" .. userId .. "/discord")
     end)
@@ -62,4 +62,4 @@ function UserFetching.LookUpUserCommunityAccount(userId)
     end
 end
 
-return UserFetching
+return UserLookup
