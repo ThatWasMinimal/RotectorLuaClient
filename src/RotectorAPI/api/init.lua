@@ -1,6 +1,7 @@
 local Core = {}
 
 Core.User = require(script.user)
+Core.Group = require(script.groups)
 Core.Config = require(script.config)
 
 function Core.getBaseURL()
