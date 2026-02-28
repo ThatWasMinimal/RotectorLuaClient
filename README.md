@@ -1,5 +1,5 @@
 # the rotector api
-very cool and evil libary for your roblox game
+very cool and cute libary for your roblox game
 
 
 # documents
