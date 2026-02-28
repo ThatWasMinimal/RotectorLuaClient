@@ -13,7 +13,7 @@ comming soon :3
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local RotectorAPI = require(ReplicatedStorage.RotectorAPI) -- depends for where you store is. for best store the package at ReplicatedStorage/RotectorAPI
+local RotectorAPI = require(ReplicatedStorage.RotectorAPI) -- depends for where you store the package is. for best store the package at ReplicatedStorage/RotectorAPI
 RotectorAPI.Init()
 
 Players.PlayerAdded:Connect(function(player)
