@@ -10,6 +10,7 @@ function RotectorAPI.Init()
     if initialized then return end
     initialized = true
 
+    print("[ROTECTOR API] Running version " .. RotectorAPI.Core.Config.Version)
     print("[ROTECTOR API] Checking API")
 
     local success, response = pcall(function()
