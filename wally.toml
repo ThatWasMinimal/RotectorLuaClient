@@ -1,7 +1,9 @@
 [package]
-name = "mal/RotectorApi"
-version = "0.1.0"
+name = "thatwasminimal/rotector-api"
+version = "0.1.1"
+description = "A luau package for intertacting with https://roscoe.rotector.com/"
 registry = "https://github.com/UpliftGames/wally-index"
+license = "MIT"
 realm = "shared"
 
 [dependencies]
