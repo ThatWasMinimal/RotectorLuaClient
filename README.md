@@ -1,6 +1,20 @@
 # the rotector api
 very cool and cute libary for your roblox game
 
+# installation
+
+## via wally (recomended)
+
+just add this into your `wally.toml`
+```toml
+[dependencies]
+rotector-api = "thatwasminimal/rotector-api@0.1.1"
+# and your other packages...
+```
+then do `wally install`
+
+## via release
+pick up the latest version of rotector api package in [release](https://github.com/ThatWasMinimal/RotectorLuaClient/releases) and start bumping
 
 # documents
 see [DOCUMENTION.md](https://github.com/ThatWasMinimal/RotectorLuaClient/blob/master/DOCUMENTION.md)
