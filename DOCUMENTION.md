@@ -1,7 +1,7 @@
 # RotectorAPI Documentation
 
 ## Overview
-`RotectorAPI` is a Roblox package for querying Rotector safety data for Roblox users and groups.
+`RotectorAPI` is a Roblox package for querying Rotector safety data for Roblox users, groups, and community (Discord) users.
 
 ## Requirements
 - Enable `HttpService` in your game settings.
@@ -17,7 +17,7 @@ RotectorAPI.Init()
 ```
 
 ## Recommended usage
-Use `Core.User.*` and `Core.Group.*` directly.
+Use `Core.User.*`, `Core.Group.*`, and `Core.Community.*` directly.
 
 ```luau
 local Players = game:GetService("Players")
@@ -45,7 +45,7 @@ Initializes the package and performs an API health check.
 - Logs status to output.
 
 #### `RotectorAPI.Core`
-Main namespace with `User`, `Group`, and `Config`.
+Main namespace with `User`, `Group`, `Community`, and `Config`.
 
 ### `RotectorAPI.Core.Config`
 
@@ -87,6 +87,15 @@ Batch group lookup.
 #### `LookUpTrackedUsers(groupId)`
 Returns tracked users for a Roblox group.
 
+### `RotectorAPI.Core.Community`
+
+#### `LookUpCommunityUser(communityId)`
+Returns JSON-decoded lookup data for one community (Discord) user.
+
+#### `LookUpCommunityUsers(communityIds)`
+Batch lookup for community (Discord) users.
+- `communityIds`: array of community user IDs.
+
 ## Deprecated helpers
 These still work, but print warnings:
 - `RotectorAPI.Core.fetchUser(userId)` -> use `RotectorAPI.Core.User.UserLookUp(userId)`
@@ -111,8 +120,6 @@ if data.success then
 end
 ```
 
-## Notes
-- `src/RotectorAPI/api/community_users` exists but is not exported by `RotectorAPI.Core` in the current build.
-- Current config values:
-  - `BaseURL = "http://roscoe.rotector.com"`
-  - `Version = "1.0.0"`
+## Current config values
+- `BaseURL = "http://roscoe.rotector.com"`
+- `Version = "1.0.0"`
