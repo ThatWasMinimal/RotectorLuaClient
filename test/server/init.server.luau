@@ -9,7 +9,7 @@ RotectorAPI.Init()
 
 print("Base URL:", RotectorAPI.Core.getBaseURL())
 
-local response = RotectorAPI.Core.fetchUser(1)
+local response = RotectorAPI.Core.User.LookUpUser(1)
 
 print("Response:", HttpService:JSONEncode(response))
 
