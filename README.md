@@ -3,7 +3,7 @@ very cool and cute libary for your roblox game
 
 
 # documents
-comming soon :3
+see [DOCUMENTION.md](https://github.com/ThatWasMinimal/RotectorLuaClient/blob/master/DOCUMENTION.md)
 
 # quick example :
 
